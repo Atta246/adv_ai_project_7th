@@ -1,0 +1,117 @@
+{
+  "best_model": "ANN (MLP)",
+  "selection_rule": "highest mean F1 in 10x5 repeated stratified CV on training set; ties (<0.005) broken by recall, then ROC-AUC",
+  "best_params": {
+    "KNN": {
+      "n_neighbors": 21,
+      "p": 2,
+      "weights": "uniform"
+    },
+    "Decision Tree": {
+      "class_weight": "balanced",
+      "criterion": "gini",
+      "max_depth": 4,
+      "min_samples_leaf": 4
+    },
+    "Random Forest": {
+      "class_weight": null,
+      "max_depth": 8,
+      "max_features": 3,
+      "min_samples_leaf": 1
+    },
+    "ANN (MLP)": {
+      "activation": "relu",
+      "alpha": 0.1,
+      "hidden_layer_sizes": [
+        64
+      ]
+    },
+    "SVM": {
+      "C": 0.1,
+      "class_weight": "balanced",
+      "gamma": 0.01,
+      "kernel": "rbf"
+    }
+  },
+  "test_metrics": {
+    "KNN": {
+      "Accuracy": 0.9640287769784173,
+      "Precision": 0.9574468085106383,
+      "Recall": 0.9375,
+      "F1-score": 0.9473684210526315,
+      "ROC-AUC": 0.9868360805860805,
+      "Specificity": 0.978021978021978,
+      "MCC": 0.9201682555023808,
+      "TP": 45,
+      "TN": 89,
+      "FP": 2,
+      "FN": 3
+    },
+    "Decision Tree": {
+      "Accuracy": 0.9280575539568345,
+      "Precision": 0.9318181818181818,
+      "Recall": 0.8541666666666666,
+      "F1-score": 0.8913043478260869,
+      "ROC-AUC": 0.9655448717948718,
+      "Specificity": 0.967032967032967,
+      "MCC": 0.8394636995666296,
+      "TP": 41,
+      "TN": 88,
+      "FP": 3,
+      "FN": 7
+    },
+    "Random Forest": {
+      "Accuracy": 0.9640287769784173,
+      "Precision": 0.9574468085106383,
+      "Recall": 0.9375,
+      "F1-score": 0.9473684210526315,
+      "ROC-AUC": 0.9935897435897436,
+      "Specificity": 0.978021978021978,
+      "MCC": 0.9201682555023808,
+      "TP": 45,
+      "TN": 89,
+      "FP": 2,
+      "FN": 3
+    },
+    "ANN (MLP)": {
+      "Accuracy": 0.9712230215827338,
+      "Precision": 0.9782608695652174,
+      "Recall": 0.9375,
+      "F1-score": 0.9574468085106383,
+      "ROC-AUC": 0.9963369963369964,
+      "Specificity": 0.989010989010989,
+      "MCC": 0.9362061709437728,
+      "TP": 45,
+      "TN": 90,
+      "FP": 1,
+      "FN": 3
+    },
+    "SVM": {
+      "Accuracy": 0.9712230215827338,
+      "Precision": 0.9583333333333334,
+      "Recall": 0.9583333333333334,
+      "F1-score": 0.9583333333333334,
+      "ROC-AUC": 0.9958791208791209,
+      "Specificity": 0.978021978021978,
+      "MCC": 0.9363553113553114,
+      "TP": 46,
+      "TN": 89,
+      "FP": 2,
+      "FN": 2
+    }
+  },
+  "cv_f1_mean": {
+    "KNN": 0.9537343294852922,
+    "Decision Tree": 0.9280887260870648,
+    "Random Forest": 0.954338075510091,
+    "ANN (MLP)": 0.9565029815042653,
+    "SVM": 0.9548133728672881
+  },
+  "screening_threshold": {
+    "model": "ANN (MLP)",
+    "score_type": "predict_proba",
+    "threshold": 0.17661941868405062
+  },
+  "n_train": 552,
+  "n_test": 139
+}
